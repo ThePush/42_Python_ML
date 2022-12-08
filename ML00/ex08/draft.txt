@@ -1,0 +1,5 @@
+python3 sos.py "SOS"
+
+python3 sos.py "HELLO / WORLD"
+
+python3 sos.py "96 BOULEVARD" "Bessiere"
