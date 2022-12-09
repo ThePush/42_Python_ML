@@ -27,8 +27,7 @@ class Vector:
                 self.values = values
             else:
                 raise Exception('Vector.__init__ invalid type\n')
-            self.shape = (len(self.values), 1) if len(
-                self.values) > 1 else (1, len(self.values[0]))
+            self.shape = (len(self.values), len(self.values[0]))
         except Exception as e:
             print(type(e).__name__ + ': ' + str(e))
             return
