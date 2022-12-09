@@ -1,5 +1,4 @@
 import numbers
-import math
 
 
 class Vector:
@@ -33,6 +32,14 @@ class Vector:
         except Exception as e:
             print(type(e).__name__ + ': ' + str(e))
             return
+
+    def T(self):
+        try:
+            return Vector([[row[i] for row in self.values] for i in range(len(self.values[0]))])
+        except Exception as e:
+            print(type(e).__name__ + ': ' + str(e))
+            return
+
 
     def dot(self, other):
         try:
