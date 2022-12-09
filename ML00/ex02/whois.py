@@ -3,13 +3,15 @@ import sys
 
 def main():
     try:
-        assert len(sys.argv) > 1, "AssertionError: No argument provided"
-        assert len(
-            sys.argv) == 2, "AssertionError: more than one argument are provided"
-        assert sys.argv[1].isdigit(
-        ), "AssertionError: argument is not an integer"
-    except AssertionError as e:
-        exit(e)
+        if len(sys.argv) < 2:
+            raise AssertionError('No argument provided.')
+        if len(sys.argv) > 2:
+            raise AssertionError('More than one argument provided')
+        if not sys.argv[1].isdigit():
+            raise AssertionError('Argument is not a number.')
+    except Exception as e:
+        print(type(e).__name__ + ': ' + str(e))
+        return
 
     print("I'm Zero." if int(sys.argv[1]) == 0 else
           "I'm Odd." if int(sys.argv[1]) & 1 else

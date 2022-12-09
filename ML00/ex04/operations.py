@@ -5,12 +5,11 @@ def main():
     if len(sys.argv) != 3:
         exit('Usage: python operations.py <number1> <number2>\nExample:\n\tpython operations.py 10 3')
     try:
-        assert sys.argv[1].isdigit(
-        ), "AssertionError: only integers"
-        assert sys.argv[2].isdigit(
-        ), "AssertionError: only integers"
-    except AssertionError as e:
-        exit(e)
+        if not sys.argv[1].isdigit() or not sys.argv[2].isdigit():
+            raise AssertionError('only integers')
+    except Exception as e:
+        print(type(e).__name__ + ': ' + str(e))
+        exit()
 
     print('Sum:       ', int(sys.argv[1])+int(sys.argv[2]))
     print('Difference:', int(sys.argv[1])-int(sys.argv[2]))

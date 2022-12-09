@@ -5,14 +5,17 @@ def text_analyzer(string=None):
     '''\n\tThis function counts the number of upper characters, lower characters,
 \tpunctuation and spaces in a given text.'''
 
-    while True:
-        string = input('What is the text to analyze?\n>> ')
-        if string:
-            break
+    if string is None:
+        while True:
+            string = input('What is the text to analyze?\n>> ')
+            if string:
+                break
+
     try:
-        assert type(string) is str, "AssertionError: argument is not a string"
-    except AssertionError as e:
-        print(e)
+        if not isinstance(string, str):
+            raise AssertionError('argument is not a string.')
+    except Exception as e:
+        print(type(e).__name__ + ': ' + str(e))
         return
 
     print("The text contains", len(string), "character(s):")

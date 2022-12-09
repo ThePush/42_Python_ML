@@ -15,7 +15,7 @@ def main():
                 'chocolate', 'flour', 'sugar'], 'A random cake', 'dessert')
 
     b1 = Book('My cookbook')
-    b1.add_recipe(r1)
+    b1.add_recipe((r1))
     b1.add_recipe(r2)
     b1.add_recipe(r3)
     b1.add_recipe(r4)
@@ -25,11 +25,12 @@ def main():
     print('\nTesting get_recipes_by_types:')
     print(b1.get_recipes_by_types('dessert'))
 
-    #r6 = Recipe('Constructor test', 2, 60, 6667, 'A random cake', 'dessert')
-    #r7 = 'This shall not pass as a recipe'
-    # b1.add_recipe(r7)
-    #b1.get_recipes_by_types('Type that does not exist')
-    #b1.get_recipe_by_name('Recipe that does not exist')
+    print('\nError testing:')
+    r6 = Recipe('Constructor test', 2, 60, 6667, 'A random cake', 'dessert')
+    r7 = 'This a string not a recipe'
+    b1.add_recipe(r7)
+    b1.get_recipes_by_types('Type that does not exist')
+    b1.get_recipe_by_name('Recipe that does not exist')
 
     del b1, r1, r2, r3, r4, r5
 
