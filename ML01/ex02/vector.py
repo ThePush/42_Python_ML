@@ -8,25 +8,25 @@ class Vector:
             self.shape = ()
             if isinstance(values, int):
                 if values < 1:
-                    raise Exception('Vector.__init__ invalid int range\n')
+                    raise Exception('Vector.__init__ invalid int range')
                 for i in range(values):
                     self.values.append([float(i)])
             elif isinstance(values, tuple):
                 if not all(isinstance(x, int) for x in values) or type(values[0]) != type(values[1]) or values[0] >= values[1] or len(values) != 2:
-                    raise Exception('Vector.__init__ invalid tuple range\n')
+                    raise Exception('Vector.__init__ invalid tuple range')
                 for i in range(values[1]-values[0]):
                     self.values.append([float(values[0]+i)])
             elif isinstance(values, list):
                 if not all(isinstance(x, list) for x in values) or not all(isinstance(y, float) for x in values for y in x):
-                    raise Exception('Vector.__init__ invalid list type\n')
+                    raise Exception('Vector.__init__ invalid list type')
                 if len(values) > 1:
                     for row in values:
                         if len(row) != 1:
                             raise Exception(
-                                'Vector.__init__ invalid list size\n')
+                                'Vector.__init__ invalid list size')
                 self.values = values
             else:
-                raise Exception('Vector.__init__ invalid type\n')
+                raise Exception('Vector.__init__ invalid type')
             self.shape = (len(self.values), len(self.values[0]))
         except Exception as e:
             print(type(e).__name__ + ': ' + str(e))
@@ -39,11 +39,10 @@ class Vector:
             print(type(e).__name__ + ': ' + str(e))
             return
 
-
     def dot(self, other):
         try:
             if self.shape != other.shape:
-                raise Exception('dot() different sizes of vector\n')
+                raise Exception('dot() different sizes of vector')
             return sum([rowself[i]*rowother[i] for (rowself, rowother) in zip(self.values, other.values) for i in range(len(rowself))])
             #result = 0
             # for (rowself, rowother) in zip(self.values, other.values):
@@ -57,7 +56,7 @@ class Vector:
     def __add__(self, other):
         try:
             if self.shape != other.shape:
-                raise Exception('__add__ different sizes of vector\n')
+                raise Exception('__add__ different sizes of vector')
             return Vector([[rowself[i] + rowother[i] for i in range(len(rowself))] for (rowself, rowother) in zip(self.values, other.values)])
             # for (rowself, rowother) in zip(self.values, other.values):
             #    for i in range(len(rowself)):
@@ -78,11 +77,11 @@ class Vector:
     def __truediv__(self, num):
         try:
             if not isinstance(num, numbers.Number):
-                raise NotImplementedError('Vector.__truediv__ not a scalar\n')
+                raise NotImplementedError('Vector.__truediv__ not a scalar')
             if num == 0:
                 raise ZeroDivisionError(
-                    'Vector.__truediv__ division by zero\n')
-            #return Vector([[values / num for values in row] for row in self.values])
+                    'Vector.__truediv__ division by zero')
+            # return Vector([[values / num for values in row] for row in self.values])
             return self.__mul__(1/num)
         except Exception as e:
             print(type(e).__name__ + ': ' + str(e))
@@ -91,7 +90,7 @@ class Vector:
     def __rtruediv__(self, num):
         try:
             raise NotImplementedError(
-                'Division of a scalar by a Vector is not defined here.')
+                'Vector.__rtruediv__ Division of a scalar by a Vector is not defined here.')
         except Exception as e:
             print(type(e).__name__ + ': ' + str(e))
             return
