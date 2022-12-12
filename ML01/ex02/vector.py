@@ -82,7 +82,8 @@ class Vector:
             if num == 0:
                 raise ZeroDivisionError(
                     'Vector.__truediv__ division by zero\n')
-            return Vector([[values / num for values in row] for row in self.values])
+            #return Vector([[values / num for values in row] for row in self.values])
+            return self.__mul__(1/num)
         except Exception as e:
             print(type(e).__name__ + ': ' + str(e))
             return
