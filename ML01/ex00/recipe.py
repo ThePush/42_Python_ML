@@ -32,3 +32,4 @@ class Recipe:
 
 
 # https://www.w3schools.com/python/python_classes.asp
+# https://micropyramid.com/blog/understand-self-and-__init__-method-in-python-class/
