@@ -14,16 +14,14 @@ class ImageProcessor:
             if os.stat(path).st_size == 0:
                 raise OSError(f'None')
             img = Image.open(path)
-            img.load()
             print(f'Loading image of dimensions {img.width} x {img.height}')
-            return np.asarray(img)
+            return np.array(img)
         except Exception as e:
             print(f'Exception: {type(e).__name__} -- strerror: {e}')
             return None
 
     def display(self, array: np.ndarray) -> None:
         try:
-            img = Image.fromarray(array)
-            img.show()
+            Image.fromarray(array).show()
         except Exception as e:
             print(e)
