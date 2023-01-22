@@ -8,10 +8,7 @@ class TinyStatistician:
         array.'''
         if len(x) == 0:
             return None
-        sum = 0
-        for i in x:
-            sum += i
-        return sum / len(x)
+        return sum(x) / len(x)
 
     def median(self, x):
         '''Computes the median of a given non-empty list or array x. The method
