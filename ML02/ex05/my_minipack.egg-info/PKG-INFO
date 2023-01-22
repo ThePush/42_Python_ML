@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: my-minipack
+Version: 1.0.0
+Summary: Howto create a package in python.
+Author: jsemel
+Author-email: jsemel@student.42.fr
+License: GPLv3
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers :: Students
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Education :: HowTo :: Package
+License-File: LICENSE.md
