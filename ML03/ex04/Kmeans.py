@@ -31,7 +31,7 @@ class KmeansClustering:
         self.centroids = X[np.random.choice(
             X.shape[0], self.ncentroid, replace=False), :]
         # Update centroids
-        for i in range(self.max_iter):
+        for _ in range(self.max_iter):
             # Assign each point to the closest centroid
             labels = self.predict(X)
             for j in range(self.ncentroid):
