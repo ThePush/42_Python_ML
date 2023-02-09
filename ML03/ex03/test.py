@@ -3,7 +3,6 @@ from ImageProcessor import ImageProcessor
 
 imp = ImageProcessor()
 arr = imp.load("../resources/elon_canaGAN.png")
-print(arr)
 #imp.display(arr)
 cf = ColorFilter()
 #imp.display(cf.invert(arr))
