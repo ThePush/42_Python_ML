@@ -12,8 +12,8 @@
 
 * Decorators
 
-* Numpy and Pandas
+* Numpy and Pandas arrays and dataframes manipulation
 
-* How to publish packages
+* How to publish packages on PyPi
 
 * K-Means algorithm from scratch
