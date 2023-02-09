@@ -12,7 +12,7 @@
 
 * Decorators
 
-* Numpy and Pandas arrays and dataframes manipulation
+* Numpy arrays and Pandas dataframes manipulation
 
 * How to publish packages on PyPi
 
