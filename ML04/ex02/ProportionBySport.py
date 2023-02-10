@@ -19,9 +19,10 @@ def proportion_by_sport(df: pd.DataFrame, year: int, sport: str, gender: str) ->
     if not isinstance(df, pd.DataFrame) or not isinstance(year, int) or \
             not isinstance(gender, str) or not isinstance(sport, str):
         raise TypeError('Invalid argument type')
-    nominator = df.loc[(df['Year'] == year) & (df['Sex']
-                       == gender) & (df['Sport'] == sport)].drop_duplicates(subset=['ID']).shape[0]
-    denominator = df.loc[(df['Year'] == year) & (df['Sex'] == gender)].drop_duplicates(subset=['ID']).shape[0]
+    nominator = df.query(
+        'Year == @year and Sex == @gender and Sport == @sport').drop_duplicates(subset=['ID']).shape[0]
+    denominator = df.query(
+        'Year == @year and Sex == @gender').drop_duplicates(subset=['ID']).shape[0]
     try:
         res = nominator / denominator
     except ZeroDivisionError:
