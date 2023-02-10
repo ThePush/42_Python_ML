@@ -1,6 +1,8 @@
 # 42 school Python / ML bootcamp by 42AI
 
-## Topics
+## <u>Topics:</u>
+
+<br />
 
 -   Object-Oriented Programming
 
@@ -20,7 +22,11 @@
 
 #
 
-### Image processing with numpy
+## <u>Bootcamp Highlights:</u>
+
+<br />
+
+### <u>Image processing with numpy</u>
 
 Applying color filters to images using numpy arrays.
 Images are loaded as numpy arrays, each pixel is represented by a 3-tuple of RGB values. We can apply filters to the image by modifying the RGB values of each pixel.
@@ -40,9 +46,9 @@ Images are loaded as numpy arrays, each pixel is represented by a 3-tuple of RGB
 <img src="https://user-images.githubusercontent.com/91064070/218063362-8b1d78d1-aaca-48e2-aff5-db86a74fe0ce.PNG" width="250" height="150">
 </p>
 
-#
+<br />
 
-### K-Means
+### <u>K-Means</u>
 
 K-Means is an unsupervised learning algorithm that groups data points into k clusters. The algorithm is iterative and starts by randomly assigning each data point to a cluster. Then, the algorithm iterates between two steps:
 
