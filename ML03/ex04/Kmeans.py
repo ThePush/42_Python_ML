@@ -129,16 +129,17 @@ def main():
 
     # Parse arguments
     try:
-        check_args(sys.argv)
-        for arg in sys.argv:
-            if '=' in arg:
-                key, value = arg.split('=')
-                if key == 'filepath':
-                    Parameters['filepath'] = value
-                elif key == 'max_iter':
-                    Parameters['max_iter'] = int(value)
-                elif key == 'ncentroid':
-                    Parameters['ncentroid'] = int(value)
+        if (len(sys.argv) >1):
+            check_args(sys.argv)
+            for arg in sys.argv:
+                if '=' in arg:
+                    key, value = arg.split('=')
+                    if key == 'filepath':
+                        Parameters['filepath'] = value
+                    elif key == 'max_iter':
+                        Parameters['max_iter'] = int(value)
+                    elif key == 'ncentroid':
+                        Parameters['ncentroid'] = int(value)
         check_datafile(Parameters['filepath'])
         df = pd.read_csv(Parameters['filepath'])
         df = df.dropna()
