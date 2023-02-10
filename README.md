@@ -1,5 +1,5 @@
 <div align="center">
-  <center><h1>42 school Python / ML bootcamp by 42AI 📈</h1></center>
+  <center><h1>Python / ML bootcamp by 42AI 📈</h1></center>
   </div>
 
 <div id="user-content-toc">
