@@ -1,8 +1,11 @@
 # 42 school Python / ML bootcamp by 42AI
 
-## <u>Topics:</u>
+<div id="user-content-toc">
+  <ul>
+    <summary><h2 style="display: inline-block;">Topics:</h2></summary>
+  </ul>
+</div>
 
-<br />
 
 -   Object-Oriented Programming
 
@@ -22,9 +25,12 @@
 
 #
 
-## <u>Bootcamp Highlights:</u>
+<div id="user-content-toc">
+  <ul>
+    <summary><h2 style="display: inline-block;">Highlights:</h2></summary>
+  </ul>
+</div>
 
-<br />
 
 ### <u>Image processing with numpy</u>
 
@@ -48,7 +54,7 @@ Images are loaded as numpy arrays, each pixel is represented by a 3-tuple of RGB
 
 <br />
 
-### <u>K-Means</u>
+### <u>K-Means from scratch</u>
 
 K-Means is an unsupervised learning algorithm that groups data points into k clusters. The algorithm is iterative and starts by randomly assigning each data point to a cluster. Then, the algorithm iterates between two steps:
 
